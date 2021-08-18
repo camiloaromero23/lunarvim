@@ -65,16 +65,7 @@ lvim.plugins = {
   {
     "norcalli/nvim-colorizer.lua",
     config = function()
-      require("colorizer").setup({ "*" }, {
-        RGB = true, -- #RGB hex codes
-        RRGGBB = true, -- #RRGGBB hex codes
-        names = true, -- "Name" codes like Blue
-        RRGGBBAA = true, -- #RRGGBBAA hex codes
-        rgb_fn = true, -- CSS rgb() and rgba() functions
-        hsl_fn = true, -- CSS hsl() and hsla() functions
-        css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-        css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-      })
+      require("user.nvim_colorizer").config()
     end,
   },
   {
@@ -87,8 +78,7 @@ lvim.plugins = {
   {
     "f-person/git-blame.nvim",
     config = function()
-      vim.g.gitblame_message_template = "      <author>, <date> • <summary>"
-      vim.g.gitblame_date_format = "%r"
+      require("user.git_blame").config()
     end,
   },
   {
