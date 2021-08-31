@@ -1,7 +1,7 @@
 -- lvim.lang.python.formatters = { { exe = "autopep8" } }
 lvim.lang.python.formatters = {
   {
-    exe = "autopep8",
+    exe = "black",
   },
 }
 lvim.lang.python.linters = {
