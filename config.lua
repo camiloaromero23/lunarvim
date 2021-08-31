@@ -28,9 +28,9 @@ lvim.builtin.lualine.on_config_done = function(lualine)
   config.sections.lualine_c = { components.branch, components.filename, components.diff }
   config.sections.lualine_x = {
     components.diagnostics,
-    components.encoding,
-    components.lsp,
     components.filetype,
+    components.lsp,
+    components.encoding,
     components.location,
   }
   components.scrollbar.color = { bg = colors.bg, fg = "#ADD8E6" }
