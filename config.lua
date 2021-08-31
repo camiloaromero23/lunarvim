@@ -15,6 +15,29 @@ vim.g.material_italic_tag = true
 vim.g.material_custom_colors = { accent = "#ADD8E6" }
 lvim.colorscheme = "material"
 
+-- Lualine
+lvim.builtin.lualine.options.theme = "material-nvim"
+
+lvim.builtin.lualine.on_config_done = function(lualine)
+  local config = lualine.get_config()
+  local components = require "core.lualine.components"
+  local colors = require "core.lualine.colors"
+
+  config.sections.lualine_a = { components.mode }
+  config.sections.lualine_b = {}
+  config.sections.lualine_c = { components.branch, components.filename, components.diff }
+  config.sections.lualine_x = {
+    components.diagnostics,
+    components.encoding,
+    components.lsp,
+    components.filetype,
+    components.location,
+  }
+  components.scrollbar.color = { bg = colors.bg, fg = "#ADD8E6" }
+  config.sections.lualine_z = { components.scrollbar }
+  lualine.setup(config)
+end
+
 -- Keymappings
 lvim.leader = "space"
 -- overwrite the key-mappings provided by LunarVim for any mode, or leave it empty to keep them
