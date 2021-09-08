@@ -1,81 +1,23 @@
 -- General
-lvim.format_on_save = true
-lvim.lint_on_save = true
-vim.opt.hlsearch = false
-vim.opt.cmdheight = 1
-vim.opt.relativenumber = true
+require "user.general_setup"
 
 -- Material theme
-vim.g.material_style = "darker"
-vim.g.material_contrast = true
-vim.g.material_italic_comments = true
-vim.g.material_italic_keywords = true
-vim.g.material_italic_tag = true
--- vim.g.material_disable_background = true
-vim.g.material_custom_colors = { accent = "#ADD8E6" }
-lvim.colorscheme = "material"
+require("user.material_theme_setup").config()
 
 -- Lualine
-lvim.builtin.lualine.options.theme = "material-nvim"
-
-lvim.builtin.lualine.on_config_done = function(lualine)
-  local config = lualine.get_config()
-  local components = require "core.lualine.components"
-  local colors = require "core.lualine.colors"
-
-  config.sections.lualine_a = { components.mode }
-  config.sections.lualine_b = {}
-  config.sections.lualine_c = { components.branch, components.filename, components.diff }
-  config.sections.lualine_x = {
-    components.diagnostics,
-    components.filetype,
-    components.lsp,
-    components.encoding,
-    components.location,
-  }
-  components.scrollbar.color = { bg = colors.bg, fg = "#ADD8E6" }
-  config.sections.lualine_z = { components.scrollbar }
-  lualine.setup(config)
-end
+require("user.lualine_setup").config()
 
 -- Keymappings
-lvim.leader = "space"
--- overwrite the key-mappings provided by LunarVim for any mode, or leave it empty to keep them
-local keymaps = {
-  normal_mode = {
-    ["Y"] = "y$",
-    ["N"] = "Nzzzv",
-    ["n"] = "nzzzv",
-    ["J"] = "mzJ`z",
-  },
-  insert_mode = {
-    [","] = ",<c-g>u",
-    ["."] = ".<c-g>u",
-  },
-  -- visual_mode = {},
-}
-for mode, mappings in pairs(keymaps) do
-  for k, v in pairs(mappings) do
-    lvim.keys[mode][k] = v
-  end
-end
+require "user.keymaps"
 
 -- LSP
-require("user.json_schemas").setup()
--- lvim.lsp.diagnostics.update_in_insert = false
+require "user.lsp_setup"
 
 -- Builtins
-lvim.builtin.dashboard.active = true
-lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.show_icons.git = 0
-lvim.builtin.nvimtree.hide_dotfiles = 0
-lvim.builtin.nvimtree.ignore = { ".git", ".cache", ".DS_Store" }
--- lvim.builtin.dap.active = true
+require "user.builtins_setup"
 
 -- Treesitter
-lvim.builtin.treesitter.ensure_installed = "maintained"
-lvim.builtin.treesitter.autotag.enable = true
-lvim.builtin.treesitter.highlight.enabled = true
+require("user.treesitter_setup").config()
 
 -- Additional Plugins
 lvim.plugins = {
