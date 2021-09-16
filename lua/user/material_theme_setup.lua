@@ -16,7 +16,7 @@ M.config = function()
       variables = false,
       strings = false,
     },
-    -- custom_colors = { accent = "#ADD8E6" },
+    custom_colors = { accent = "#ADD8E6" },
   }
   lvim.colorscheme = "material"
 end
