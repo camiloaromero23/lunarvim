@@ -56,4 +56,10 @@ lvim.plugins = {
       require("user.lsp_signature").config()
     end,
   },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("user.indent-blankline").config()
+    end,
+  },
 }
