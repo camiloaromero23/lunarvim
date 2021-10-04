@@ -69,4 +69,10 @@ lvim.plugins = {
       require("user.indent-blankline").config()
     end,
   },
+  {
+    "p00f/nvim-ts-rainbow",
+    config = function()
+      require("user.ts-rainbow").config()
+    end,
+  },
 }
