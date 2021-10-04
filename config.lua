@@ -57,6 +57,13 @@ lvim.plugins = {
     end,
   },
   {
+    "andymass/vim-matchup",
+    event = "CursorMoved",
+    config = function()
+      require "user.matchup"
+    end,
+  },
+  {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
       require("user.indent-blankline").config()
