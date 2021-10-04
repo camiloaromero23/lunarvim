@@ -7,7 +7,6 @@ M.config = function()
   end
 
   indent_blankline.setup {
-    char = "|",
     buftype_exclude = { "terminal" },
   }
 end
