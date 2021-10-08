@@ -63,12 +63,12 @@ lvim.plugins = {
       require "user.matchup"
     end,
   },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    config = function()
-      require("user.indent-blankline").config()
-    end,
-  },
+  -- {
+  --   "lukas-reineke/indent-blankline.nvim",
+  --   config = function()
+  --     require("user.indent-blankline").config()
+  --   end,
+  -- },
   {
     "p00f/nvim-ts-rainbow",
     config = function()
