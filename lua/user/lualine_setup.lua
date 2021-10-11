@@ -4,8 +4,8 @@ M.config = function()
 
   lvim.builtin.lualine.on_config_done = function(lualine)
     local config = lualine.get_config()
-    local components = require "core.lualine.components"
-    local colors = require "core.lualine.colors"
+    local components = require "lvim.core.lualine.components"
+    local colors = require "lvim.core.lualine.colors"
 
     config.sections.lualine_a = { components.mode }
     config.sections.lualine_b = {}
