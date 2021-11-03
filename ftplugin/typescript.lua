@@ -1,14 +1,13 @@
-lvim.lang.typescript.formatters = {
+local formatters = require "lvim.lsp.null-ls.formatters"
+local linters = require "lvim.lsp.null-ls.linters"
+
+formatters.setup {
   {
     exe = "prettier",
   },
 }
-
-lvim.lang.typescript.linters = {
+linters.setup {
   {
     exe = "eslint_d",
   },
 }
-
-lvim.lang.typescriptreact.formatters = lvim.lang.typescript.formatters
-lvim.lang.typescriptreact.linters = lvim.lang.typescript.linters
