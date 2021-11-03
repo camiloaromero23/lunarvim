@@ -84,5 +84,13 @@ lvim.plugins = {
       vim.g.rnvimr_bw_enable = 1
     end,
   },
-  { "github/copilot.vim" },
+  {
+    "github/copilot.vim",
+    config = function()
+      vim.g.copilot_no_tab_map = true
+      vim.cmd [[
+                imap <silent><script><expr> <Right> copilot#Accept("\<CR>")
+      ]]
+    end,
+  },
 }
