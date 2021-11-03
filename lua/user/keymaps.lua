@@ -5,6 +5,7 @@ local keymaps = {
     ["N"] = "Nzzzv",
     ["n"] = "nzzzv",
     ["J"] = "mzJ`z",
+    ["<C-P>"] = ":RnvimrToggle\n",
   },
   insert_mode = {
     [","] = ",<c-g>u",
