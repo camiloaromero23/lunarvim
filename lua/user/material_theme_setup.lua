@@ -12,7 +12,7 @@ M.config = function()
       comments = true,
       keywords = true,
       tags = true,
-      functions = false,
+      functions = true,
       variables = false,
       strings = false,
     },
