@@ -92,4 +92,13 @@ lvim.plugins = {
       vim.g.mkdp_auto_start = 1
     end,
   },
+  -- {
+  --   "github/copilot.vim",
+  --   config = function()
+  --     vim.g.copilot_no_tab_map = true
+  --     vim.cmd [[
+  --               imap <silent><script><expr> <C-E> copilot#Accept("\<CR>")
+  --     ]]
+  --   end,
+  -- },
 }
