@@ -85,12 +85,11 @@ lvim.plugins = {
     end,
   },
   {
-    "github/copilot.vim",
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    ft = "markdown",
     config = function()
-      vim.g.copilot_no_tab_map = true
-      vim.cmd [[
-                imap <silent><script><expr> <Right> copilot#Accept("\<CR>")
-      ]]
+      vim.g.mkdp_auto_start = 1
     end,
   },
 }
