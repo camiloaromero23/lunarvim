@@ -1,7 +1,6 @@
 lvim.leader = "space"
 local keymaps = {
   normal_mode = {
-    ["Y"] = "y$",
     ["N"] = "Nzzzv",
     ["n"] = "nzzzv",
     ["J"] = "mzJ`z",
