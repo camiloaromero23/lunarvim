@@ -25,9 +25,6 @@ lvim.plugins = {
   --   "lunarvim/colorschemes",
   -- },
   {
-    "marko-cerovac/material.nvim",
-  },
-  {
     "norcalli/nvim-colorizer.lua",
     config = function()
       require("user.nvim_colorizer").config()
@@ -79,9 +76,11 @@ lvim.plugins = {
   --   end,
   -- },
   {
-    "p00f/nvim-ts-rainbow",
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    ft = "markdown",
     config = function()
-      require("user.ts-rainbow").config()
+      vim.g.mkdp_auto_start = 1
     end,
   },
   {
@@ -92,20 +91,12 @@ lvim.plugins = {
     end,
   },
   {
-    "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
-    ft = "markdown",
+    "p00f/nvim-ts-rainbow",
     config = function()
-      vim.g.mkdp_auto_start = 1
+      require("user.ts-rainbow").config()
     end,
   },
-  -- {
-  --   "github/copilot.vim",
-  --   config = function()
-  --     vim.g.copilot_no_tab_map = true
-  --     vim.cmd [[
-  --               imap <silent><script><expr> <C-E> copilot#Accept("\<CR>")
-  --     ]]
-  --   end,
-  -- },
+  {
+    "marko-cerovac/material.nvim",
+  },
 }
