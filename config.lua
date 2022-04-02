@@ -76,12 +76,10 @@ lvim.plugins = {
     end,
   },
   {
-    "kevinhwang91/rnvimr",
-    cmd = "RnvimrToggle",
+    "github/copilot.vim",
     config = function()
-      vim.g.rnvimr_draw_border = 1
-      vim.g.rnvimr_pick_enable = 1
-      vim.g.rnvimr_bw_enable = 1
+      vim.g.copilot_no_tab_map = true
+      vim.cmd [[ imap <silent><script><expr> <Right> copilot#Accept("") ]]
     end,
   },
   {
