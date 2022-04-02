@@ -7,7 +7,9 @@ M.config = function()
   end
 
   indent_blankline.setup {
-    buftype_exclude = { "terminal" },
+    show_current_context = true,
+    show_current_context_start = true,
+    buftype_exclude = { "terminal", "nofile" },
   }
 end
 
