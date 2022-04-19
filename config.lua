@@ -99,4 +99,7 @@ lvim.plugins = {
   {
     "marko-cerovac/material.nvim",
   },
+  {
+    "metakirby5/codi.vim",
+  },
 }
