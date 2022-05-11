@@ -1,6 +1,9 @@
 -- General
 require "user.general_setup"
 
+-- Autocommands
+require "user.autocommands"
+
 -- Material theme
 require("user.material_theme_setup").config()
 
@@ -82,6 +85,13 @@ lvim.plugins = {
     config = function()
       vim.g.mkdp_auto_start = 1
     end,
+  },
+  {
+    "simrat39/rust-tools.nvim",
+    config = function()
+      require("user.rust_tools").config()
+    end,
+    ft = { "rust", "rs" },
   },
   {
     "github/copilot.vim",
