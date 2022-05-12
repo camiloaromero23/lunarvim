@@ -40,12 +40,12 @@ lvim.plugins = {
   -- {
   --   "fatih/vim-go",
   -- },
-  -- {
-  --   "f-person/git-blame.nvim",
-  --   config = function()
-  --     require("user.git_blame").config()
-  --   end,
-  -- },
+  {
+    "f-person/git-blame.nvim",
+    config = function()
+      require("user.git_blame").config()
+    end,
+  },
   {
     "tpope/vim-fugitive",
   },
