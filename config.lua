@@ -22,11 +22,20 @@ require "user.builtins_setup"
 -- Treesitter
 require("user.treesitter_setup").config()
 
+-- WinBar
+require "user.winbar"
+
 -- Additional Plugins
 lvim.plugins = {
   -- {
   --   "lunarvim/colorschemes",
   -- },
+  {
+    "SmiteshP/nvim-gps",
+    config = function()
+      require("user.gps").config()
+    end,
+  },
   {
     "norcalli/nvim-colorizer.lua",
     config = function()
