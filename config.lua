@@ -63,6 +63,9 @@ lvim.plugins = {
     "tpope/vim-fugitive",
   },
   {
+    "tpope/vim-surround",
+  },
+  {
     "ray-x/lsp_signature.nvim",
     event = "InsertEnter",
     config = function()
