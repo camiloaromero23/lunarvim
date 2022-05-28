@@ -1,5 +1,5 @@
--- General
-require "user.general_setup"
+-- Options
+require "user.options"
 
 -- Autocommands
 require "user.autocommands"
