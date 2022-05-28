@@ -46,9 +46,13 @@ lvim.plugins = {
     "windwp/nvim-ts-autotag",
     event = "InsertEnter",
   },
-  -- {
-  --   "fatih/vim-go",
-  -- },
+  {
+    "fatih/vim-go",
+    config = function()
+      require("user.vim-go").config()
+    end,
+    ft = { "go" },
+  },
   {
     "f-person/git-blame.nvim",
     config = function()
