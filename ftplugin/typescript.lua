@@ -11,5 +11,8 @@ formatters.setup {
 linters.setup {
   {
     exe = "eslint_d",
+    args = {
+      ". --cache",
+    },
   },
 }
