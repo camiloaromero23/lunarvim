@@ -25,5 +25,8 @@ require("user.treesitter_setup").config()
 -- WinBar
 require "user.winbar"
 
+-- Devicons
+require "user.devicons"
+
 -- Additional Plugins
 require "user.plugins"
