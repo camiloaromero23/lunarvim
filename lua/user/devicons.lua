@@ -31,7 +31,7 @@ devicons.setup {
       name = "ts",
     },
     tsx = {
-      icon = "",
+      icon = "",
       color = "#3178c6",
       cterm_color = "67",
       name = "tsx",
