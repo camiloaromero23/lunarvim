@@ -33,7 +33,9 @@ vim.api.nvim_create_autocmd({ "CursorMoved", "BufWinEnter", "BufFilePost" }, {
       value = require("user.winbar").filename()
     end
 
-    vim.opt_local.winbar = value
+    pcall(function()
+      vim.opt_local.winbar = value
+    end)
   end,
 })
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
