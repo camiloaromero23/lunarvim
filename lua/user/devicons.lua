@@ -54,9 +54,24 @@ devicons.setup {
       color = "#3178c6",
       name = "componentts",
     },
-    ["test.tsx"] = {
+    ["test.js"] = {
+      icon = "",
+      color = "#f7df1e",
+      name = "testJS",
+    },
+    ["test.ts"] = {
       icon = "",
       color = "#3178c6",
+      name = "testTS",
+    },
+    ["test.jsx"] = {
+      icon = "",
+      color = "#04bbcb",
+      name = "testJSX",
+    },
+    ["test.tsx"] = {
+      icon = "",
+      color = "#04bbcb",
       name = "testTSX",
     },
     ["module.ts"] = {
