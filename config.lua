@@ -28,5 +28,8 @@ require "user.winbar"
 -- Devicons
 require "user.devicons"
 
+-- Telescope
+require "user.telescope"
+
 -- Additional Plugins
 require "user.plugins"
