@@ -30,7 +30,13 @@ M.filename = function()
       extension = extension:gsub("%.", "") -- remove . (. is a special character so we have to escape it)
     end
 
-    file_icon, file_icon_color = require("nvim-web-devicons").get_icon_color(filename, extension, { default = default })
+    ---@diagnostic disable-next-line: missing-parameter
+    local file_extension = vim.fn.expand "%:e:e"
+    file_icon, file_icon_color = require("nvim-web-devicons").get_icon_color(
+      file_extension,
+      extension,
+      { default = default }
+    )
 
     local hl_group = "FileIconColor" .. extension
 
