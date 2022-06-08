@@ -5,6 +5,7 @@ local options = {
   foldenable = false,
   foldmethod = "expr",
   foldexpr = "nvim_treesitter#foldexpr()",
+  laststatus = 3,
 }
 
 for k, v in pairs(options) do
