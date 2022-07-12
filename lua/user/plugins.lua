@@ -85,14 +85,14 @@ lvim.plugins = {
     "thosakwe/vim-flutter",
     ft = { "dart" },
   },
-  {
-    "github/copilot.vim",
-    config = function()
-      vim.g.copilot_no_tab_map = true
-      vim.cmd [[ imap <silent><script><expr> <Right> copilot#Accept("") ]]
-      -- vim.g.copilot_node_command = "/usr/local/n/versions/node/16.14.2/bin/node"
-    end,
-  },
+  -- {
+  --   "github/copilot.vim",
+  --   config = function()
+  --     vim.g.copilot_no_tab_map = true
+  --     vim.cmd [[ imap <silent><script><expr> <Right> copilot#Accept("") ]]
+  --     vim.g.copilot_node_command = "/usr/local/n/versions/node/16.14.2/bin/node"
+  --   end,
+  -- },
   {
     "p00f/nvim-ts-rainbow",
     config = function()
