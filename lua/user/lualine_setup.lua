@@ -11,7 +11,7 @@ M.config = function()
 
     config.sections.lualine_a = { components.mode }
     config.sections.lualine_b = {}
-    config.sections.lualine_c = { components.branch, components.filename, components.diff, components.diagnostics }
+    config.sections.lualine_c = { components.branch, components.filename, components.diagnostics }
     config.sections.lualine_x = {
       components.filetype,
       components.lsp,
