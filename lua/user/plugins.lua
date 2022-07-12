@@ -1,7 +1,7 @@
 lvim.plugins = {
-  -- {
-  --   "lunarvim/colorschemes",
-  -- },
+  {
+    "lunarvim/colorschemes",
+  },
   {
     "SmiteshP/nvim-gps",
     config = function()
