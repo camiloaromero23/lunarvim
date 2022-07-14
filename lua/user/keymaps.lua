@@ -17,3 +17,6 @@ for mode, mappings in pairs(keymaps) do
     lvim.keys[mode][k] = v
   end
 end
+local functions = require "user.functions"
+vim.keymap.set({ "n", "v" }, " tw", functions.toggleWrap, { noremap = true, silent = true })
+-- vim.keymap.set({ "n", "v" }, "<leader>tw", functions.toggleWrap())
