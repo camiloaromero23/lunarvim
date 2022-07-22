@@ -44,3 +44,17 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
     vim.cmd "set formatoptions-=cro"
   end,
 })
+
+--  Latex
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+  pattern = { "*.tex" },
+  ---@diagnostic disable-next-line: missing-parameter
+  command = "silent exec " .. '"!zathura ' .. vim.fn.expand "%:r%" .. '.pdf &"',
+  once = true,
+})
+
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+  pattern = { "*.tex" },
+  ---@diagnostic disable-next-line: missing-parameter
+  command = "silent exec " .. '"!pdflatex ' .. vim.fn.expand "%:t" .. '"',
+})
