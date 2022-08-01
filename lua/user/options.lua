@@ -1,10 +1,11 @@
 local options = {
   hlsearch = false,
   cmdheight = 1,
+  -- colorcolumn = "81",
   relativenumber = true,
   foldenable = false,
-  foldmethod = "expr",
-  foldexpr = "nvim_treesitter#foldexpr()",
+  -- foldmethod = "expr",
+  -- foldexpr = "nvim_treesitter#foldexpr()",
   laststatus = 3,
 }
 
