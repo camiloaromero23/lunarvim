@@ -10,43 +10,40 @@ local function isempty(s)
 end
 
 M.filename = function()
+  ---@diagnostic disable-next-line: missing-parameter
   local filename = vim.fn.expand("%"):match "([^/]+)$"
 
-  local extension = ""
-  local file_icon = ""
-  local file_icon_color = ""
+  if isempty(filename) then
+    return
+  end
+
   local default_file_icon = ""
   local default_file_icon_color = ""
 
-  if not isempty(filename) then
-    extension = filename:match "^.+(%..+)$"
-
-    local default = false
-
-    if isempty(extension) then
-      extension = ""
-      default = true
-    else
-      extension = extension:gsub("%.", "") -- remove . (. is a special character so we have to escape it)
-    end
-
+  ---@diagnostic disable-next-line: missing-parameter
+  local file_name = vim.fn.expand "%:t"
+  ---@diagnostic disable-next-line: missing-parameter
+  local file_extension = vim.fn.expand "%:e:e"
+  local file_icon, file_icon_color = require("nvim-web-devicons").get_icon_color(
     ---@diagnostic disable-next-line: missing-parameter
-    local file_extension = vim.fn.expand "%:e:e"
-    file_icon, file_icon_color = require("nvim-web-devicons").get_icon_color(
-      file_extension,
-      extension,
-      { default = default }
-    )
+    file_name,
+    file_extension,
+    { default = true }
+  )
 
-    local hl_group = "FileIconColor" .. extension
-
-    vim.api.nvim_set_hl(0, hl_group, { fg = file_icon_color })
-    if file_icon == nil then
-      file_icon = default_file_icon
-      file_icon_color = default_file_icon_color
-    end
-    return " " .. "%#" .. hl_group .. "#" .. file_icon .. "%*" .. " " .. filename .. "%*"
+  if file_icon == nil or file_icon == "" or file_icon == "" then
+    ---@diagnostic disable-next-line: missing-parameter
+    file_extension = vim.fn.expand "%:e"
   end
+
+  local hl_group = "FileIconColor" .. file_extension
+
+  vim.api.nvim_set_hl(0, hl_group, { fg = file_icon_color })
+  if file_icon == nil then
+    file_icon = default_file_icon
+    file_icon_color = default_file_icon_color
+  end
+  return " " .. "%#" .. hl_group .. "#" .. file_icon .. "%*" .. " " .. filename .. "%*"
 end
 
 M.gps = function()
