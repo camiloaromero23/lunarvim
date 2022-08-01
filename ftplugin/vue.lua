@@ -1,6 +1,8 @@
 local formatters = require "lvim.lsp.null-ls.formatters"
 local linters = require "lvim.lsp.null-ls.linters"
 
+-- require("lvim.lsp.manager").setup "tailwindcss"
+
 formatters.setup {
   {
     exe = "prettier",
