@@ -38,3 +38,6 @@ require "user.telescope"
 
 -- Additional Plugins
 require "user.plugins"
+
+-- Custom commands
+require "user.custom_commands"
