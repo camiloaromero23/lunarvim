@@ -5,10 +5,10 @@ require "user.options"
 require "user.autocommands"
 
 -- Material theme
-require("user.material_theme_setup").config()
+require "user.material_theme_setup"
 
 -- Lualine
-require("user.lualine_setup").config()
+require "user.lualine_setup"
 
 -- Keymappings
 require "user.keymaps"
@@ -20,7 +20,7 @@ require "user.lsp"
 require "user.builtins_setup"
 
 -- Treesitter
-require("user.treesitter_setup").config()
+require "user.treesitter_setup"
 
 -- WinBar
 require "user.winbar"
