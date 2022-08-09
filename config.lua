@@ -19,7 +19,7 @@ require("user.lualine_setup").config()
 require "user.keymaps"
 
 -- LSP
-require "user.lsp_setup"
+require "user.lsp"
 
 -- Builtins
 require "user.builtins_setup"

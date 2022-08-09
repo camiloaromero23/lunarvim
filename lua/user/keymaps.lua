@@ -5,6 +5,7 @@ local keymaps = {
     ["n"] = "nzzzv",
     ["J"] = "mzJ`z",
     ["<C-8>"] = ":%s/<c-r><c-w>/",
+    ["<leader>se"] = ":LspStop emmet_ls<CR>",
   },
   insert_mode = {
     [","] = ",<c-g>u",
