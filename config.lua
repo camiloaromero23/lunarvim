@@ -1,4 +1,3 @@
-local theme = "material"
 -- Options
 require "user.options"
 
@@ -6,11 +5,7 @@ require "user.options"
 require "user.autocommands"
 
 -- Material theme
-if theme == "material" then
-  require("user.material_theme_setup").config()
-else
-  lvim.colorscheme = "darkplus"
-end
+require("user.material_theme_setup").config()
 
 -- Lualine
 require("user.lualine_setup").config()
