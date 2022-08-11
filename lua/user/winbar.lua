@@ -36,7 +36,7 @@ M.filename = function()
     file_extension = vim.fn.expand "%:e"
   end
 
-  local hl_group = "FileIconColor" .. file_extension
+  local hl_group = "WinBarFileIconColor"
 
   vim.api.nvim_set_hl(0, hl_group, { fg = file_icon_color })
   if file_icon == nil then
