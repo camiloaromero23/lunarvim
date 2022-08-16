@@ -31,13 +31,14 @@ vim.api.nvim_create_autocmd({ "CursorMoved", "BufWinEnter", "BufFilePost" }, {
       return
     end
 
-    local value = require("user.winbar").gps()
-
-    if value == nil then
-      value = require("user.winbar").filename()
-    end
-
     pcall(function()
+      local winbar = require "user.winbar"
+      local value = winbar.gps()
+
+      if value == nil then
+        value = winbar.filename()
+      end
+
       vim.opt_local.winbar = value
     end)
   end,
