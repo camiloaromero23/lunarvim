@@ -77,7 +77,7 @@ lvim.plugins = {
   {
     "simrat39/rust-tools.nvim",
     config = function()
-      require("user.rust_tools").config()
+      require "user.rust_tools"
     end,
     ft = { "rust", "rs" },
   },
