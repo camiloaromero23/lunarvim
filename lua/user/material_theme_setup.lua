@@ -27,7 +27,7 @@ material.setup {
     colored_cursor = true,
     eob_lines = true,
   },
-  async_loading = false,
+  async_loading = true,
 }
 
 vim.g.material_style = "darker"
