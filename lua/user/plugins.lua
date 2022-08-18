@@ -16,7 +16,10 @@ lvim.plugins = {
   },
   {
     "windwp/nvim-ts-autotag",
-    event = "InsertEnter",
+    config = function()
+      require "user.autotag"
+    end,
+    requires = { "nvim-treesitter/nvim-treesitter" },
   },
   {
     "fatih/vim-go",
