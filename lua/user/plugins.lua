@@ -75,11 +75,9 @@ lvim.plugins = {
     end,
     ft = { "rust", "rs" },
   },
-  {
-    "thosakwe/vim-flutter",
-    ft = { "dart" },
-  },
   -- {
+  --   "thosakwe/vim-flutter",
+  --   ft = { "dart" },
   -- },
   {
     "nvim-treesitter/nvim-treesitter-context",
