@@ -88,7 +88,7 @@ lvim.plugins = {
   {
     "p00f/nvim-ts-rainbow",
     config = function()
-      require("user.ts-rainbow").config()
+      require "user.ts-rainbow"
     end,
   },
   {
