@@ -9,7 +9,7 @@ lvim.plugins = {
     end,
   },
   {
-    "norcalli/nvim-colorizer.lua",
+    "NvChad/nvim-colorizer.lua",
     config = function()
       require("user.nvim_colorizer").config()
     end,
