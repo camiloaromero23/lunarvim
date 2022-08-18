@@ -21,5 +21,17 @@ for mode, mappings in pairs(keymaps) do
   end
 end
 local functions = require "user.functions"
+
+lvim.builtin.which_key.mappings["a"] = {
+  name = "AutoRun",
+  t = { "<cmd>AutoTex<CR>", "AutoRun latex" },
+  r = { "<cmd>AutoRun<CR>", "AutoRun a command" },
+}
+
+lvim.builtin.which_key.mappings["t"] = {
+  name = "Toggle",
+  d = { "<cmd>ToggleDarkPlus<CR>", "Toggle Theme with VSCode Dark Plus" },
+  w = { functions.toggleWrap, "Toggle line wrap" },
+}
 vim.keymap.set({ "n", "v" }, " tw", functions.toggleWrap, { noremap = true, silent = true })
 -- vim.keymap.set({ "n", "v" }, "<leader>tw", functions.toggleWrap())
