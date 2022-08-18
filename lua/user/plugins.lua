@@ -87,9 +87,6 @@ lvim.plugins = {
   },
   {
     "p00f/nvim-ts-rainbow",
-    config = function()
-      require "user.ts-rainbow"
-    end,
   },
   {
     "marko-cerovac/material.nvim",
