@@ -60,15 +60,6 @@ lvim.plugins = {
       require("user.indent-blankline").config()
     end,
   },
-  -- {
-  --   "kevinhwang91/rnvimr",
-  --   cmd = "RnvimrToggle",
-  --   config = function()
-  --     vim.g.rnvimr_draw_border = 1
-  --     vim.g.rnvimr_pick_enable = 1
-  --     vim.g.rnvimr_bw_enable = 1
-  --   end,
-  -- },
   {
     "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
@@ -89,12 +80,6 @@ lvim.plugins = {
     ft = { "dart" },
   },
   -- {
-  --   "github/copilot.vim",
-  --   config = function()
-  --     vim.g.copilot_no_tab_map = true
-  --     vim.cmd [[ imap <silent><script><expr> <Right> copilot#Accept("") ]]
-  --     vim.g.copilot_node_command = "/usr/local/n/versions/node/16.14.2/bin/node"
-  --   end,
   -- },
   {
     "nvim-treesitter/nvim-treesitter-context",
@@ -110,8 +95,5 @@ lvim.plugins = {
   },
   {
     "marko-cerovac/material.nvim",
-  },
-  {
-    "metakirby5/codi.vim",
   },
 }
